@@ -9,18 +9,34 @@ function PokemonCard({ pokemon }) {
   });
   return (
     <div className="card">
-      <div>
-        <img src={`${process.env.PUBLIC_URL}/pokemonImage/${id}.png`} />
+      <div className="img-container">
+        <img
+          src={`${process.env.PUBLIC_URL}/pokemonImage/${id}.png`}
+          alt={name.english}
+          className="img-fluid"
+        />
       </div>
-      <div>{name.english}</div>
-      <div>{typeComponents}</div>
-      <ul>
-        <li>HP: {base.HP}</li>
-        <li>Attack: {base.Attack}</li>
-        <li>Defence: {base.Defence}</li>
-        <li>Sp. Atk: {base.SpAttack}</li>
-        <li>Sp. Def: {base.SpDefence}</li>
-        <li>Speed: {base.Speed}</li>
+      <h3>{name.english}</h3>
+      <div className="type-container">{typeComponents}</div>
+      <ul className="list-style-none">
+        <li>
+          <b>HP</b>: {base.HP}
+        </li>
+        <li>
+          <b>Attack</b>: {base.Attack}
+        </li>
+        <li>
+          <b>Defence</b>: {base.Defence}
+        </li>
+        <li>
+          <b>Sp. Atk</b>: {base.SpAttack}
+        </li>
+        <li>
+          <b>Sp. Def</b>: {base.SpDefence}
+        </li>
+        <li>
+          <b>Speed</b>: {base.Speed}
+        </li>
       </ul>
     </div>
   );
