@@ -1,0 +1,11 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  width: 12rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card:hover {
+  border: 1px solid #888;
+}
