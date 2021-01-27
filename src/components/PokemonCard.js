@@ -5,7 +5,7 @@ function PokemonCard({ pokemon }) {
   const { id, name, type, base } = pokemon;
 
   const typeComponents = type.map((eachType) => {
-    return <PokemonType type={eachType} />;
+    return <PokemonType type={eachType} key={`${id}-${name}-${eachType}`} />;
   });
   return (
     <div className="card">
