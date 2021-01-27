@@ -1,7 +1,14 @@
 .App {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   margin: 0 auto;
-  width: 1600px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  grid-gap: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 #logo {
@@ -11,31 +18,28 @@
   margin: 3rem auto;
 }
 
-.card-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 1rem;
-}
-
 .card {
-  border: 1pt solid #000;
+  border: 1px solid #ccc;
   border-radius: 1rem;
   width: 12rem;
   padding: 1rem;
   text-align: center;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
+}
+
+.card:hover {
+  border: 1px solid #888;
 }
 
 .img-fluid {
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
+  margin: 0 auto;
+  align-self: center;
 }
 
 .img-container {
   height: 200px;
   display: flex;
-  align-items: center;
 }
 
 .list-style-none {
@@ -51,7 +55,7 @@
 }
 
 .type {
-  border: 1px solid #000000;
+  border: 1px solid #888;
   border-radius: 5px;
   padding: 5px;
   display: inline-block;
